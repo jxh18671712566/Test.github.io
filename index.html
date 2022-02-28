@@ -33,49 +33,7 @@
         </canvas>
     </div>
     
-    <script>
-        var canvas = document.getElementById("myCanvas");
-        var ctx = canvas.getContext("2d");
-        ctx.font = "16px Arial";
-        var hb = canvas.getContext("2d");
-
-
-
-        canvas.addEventListener("mousemove", function(e) { 
-            var cRect = canvas.getBoundingClientRect();              
-            var canvasX = Math.round(e.clientX - cRect.left);        
-            var canvasY = Math.round(e.clientY - cRect.top);         
-            // ctx.clearRect(0, 0, canvas.width, canvas.height);        
-            // ctx.fillText("X: "+canvasX+", Y: "+canvasY, 10, 20);
-//             var ctx2 = canvas.getContext("2d");
-//             ctx2.moveTo(canvasX,300);
-// 　　         ctx2.lineTo(canvasX,canvasY);
-//             ctx2.stroke();
-//             ctx2.moveTo(300,canvasY);
-// 　　         ctx2.lineTo(canvasX,canvasY);
-//             ctx2.stroke();
-        });
-
-        canvas.addEventListener("click", function(e){
-
-            var cRect = canvas.getBoundingClientRect();              
-            var canvasX = Math.round(e.clientX - cRect.left);        
-            var canvasY = Math.round(e.clientY - cRect.top);         
-            ctx.clearRect(0, 0, canvas.width, canvas.height);      
-            var xscroe = (canvasX-300)/300*3.6;
-            xscroe = xscroe.toFixed(2);
-            var yscroe = (canvasY-300)/300*3.6*(-1);
-            yscroe = yscroe.toFixed(2);
-            ctx.fillText("交互性: "+xscroe+", 理解性: "+yscroe, 2, 20);
-            ctx.fillText("O", canvasX-6, canvasY+6);
-
-//             ctx.moveTo(canvasX-3,canvasY); 
-//             ctx.lineTo(canvasX+3,canvasY);
-//             ctx.stroke();
-//             ctx.moveTo(canvasX,canvasY-3);
-// 　　         ctx.lineTo(canvasX,canvasY+3);
-//             ctx.stroke();
-        })
+   
 
 
     </script>
